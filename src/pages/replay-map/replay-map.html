@@ -1,0 +1,41 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>다시보기</ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <div id="warning" ></div>
+    <ion-grid class="mapbox allbox">
+        <ion-grid class="mb_fix">
+			<ion-grid class="map" id="replaymap">
+			</ion-grid>
+          	<p class="notice" style="z-index:9999;">{{guidText}}</p>
+        </ion-grid>
+     </ion-grid>
+
+	<ion-grid class="bt_fix" style="z-index:9999;">
+		<ion-row class="notice">
+			<ion-col class="tm_box">
+				<div class="timer">
+					<span>남은 시간</span>
+					<h1 id="remainTime">{{remainTime}}<span>초</span></h1>
+				</div>
+			</ion-col>
+			<ion-col class="tx_box">
+				<ion-row class="main_notice">{{message}}</ion-row>
+				<ion-row class="line"><i></i></ion-row>
+				<ion-row class="info">
+					<ion-col><p id="infoBox1">예측진도 <span>{{mag}}</span></p></ion-col>
+					<ion-col class="mgSets"></ion-col>
+					<ion-col><p id="infoBox2">예측진동 {{magStr}}</p></ion-col>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+
+		<ion-row class="bt_btn">
+			<ion-col><button ion-button (click)="share()"><ion-icon class="share"></ion-icon>공유</button></ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

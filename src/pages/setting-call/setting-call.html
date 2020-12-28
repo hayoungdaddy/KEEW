@@ -1,0 +1,36 @@
+<!--
+비상 연락망 설정
+-->
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button  (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>비상 연락망</ion-col>
+        <ion-col class="check"><button ion-button  (click)="save()">확인</button></ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid class="callset">
+        <ion-row class="big_tit">연락처 1</ion-row>
+        <ion-row class="sub_tit">이름</ion-row>
+        <ion-row class="i_cont"><input type="text" [(ngModel)]="name1" placeholder="이름을 입력해주세요"></ion-row>
+        <ion-row class="sub_tit">전화번호</ion-row>
+        <ion-row class="i_cont"><input type="tel" [(ngModel)]="phone1" placeholder="전화번호를 입력해주세요."></ion-row>     
+        
+        <ion-row class="line_bx"><i></i></ion-row>
+
+        <ion-row class="big_tit">연락처 2</ion-row>
+        <ion-row class="sub_tit">이름</ion-row>
+        <ion-row class="i_cont"><input type="text" [(ngModel)]="name2" placeholder="이름을 입력해주세요"></ion-row>
+        <ion-row class="sub_tit">전화번호</ion-row>
+        <ion-row class="i_cont"><input type="tel" [(ngModel)]="phone2"  placeholder="전화번호를 입력해주세요."></ion-row>     
+        
+        <ion-row class="line_bx"><i></i></ion-row>
+
+        <ion-row class="big_tit">연락처 3</ion-row>
+        <ion-row class="sub_tit">이름</ion-row>
+        <ion-row class="i_cont"><input type="text" [(ngModel)]="name3" placeholder="이름을 입력해주세요"></ion-row>
+        <ion-row class="sub_tit">전화번호</ion-row>
+        <ion-row class="i_cont lastfix"><input type="tel" [(ngModel)]="phone3"  placeholder="전화번호를 입력해주세요."></ion-row>     
+    </ion-grid>
+</ion-content>

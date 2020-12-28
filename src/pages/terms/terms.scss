@@ -1,0 +1,34 @@
+page-terms {
+
+    .ttbox {width: 100%; height:100%; min-height:500px; padding:0; position: relative; }
+    .ki_header .kj_top ion-col.txt_area {text-align: center; align-items: center; padding: 0;}
+    .basicbg { background: #fcfbfc; height: 100%; padding: 15px 20px;} 
+
+    .terms_box {padding: 0 15px 20px 15px; }
+    .terms_box .terms_tit {display: flex; flex-direction: row; padding-top: 20px; }
+    .terms_box .terms_tit ion-col {display: flex; flex-direction: column; }
+    .terms_box .terms_tit ion-col input[type='checkbox'] {display: none;}
+
+    .terms_box .terms_tit .tit {flex-grow: 12;font-size: 14px; color: #4a4a4a; font-weight: 500; justify-content: center; }
+    .terms_box .terms_tit .chk {flex-grow: 1; flex-wrap: nowrap; }
+    .terms_box .terms_tit .chk label {display: flex; flex-direction: row; }
+    
+    .terms_box .terms_tit .chk label i { flex-direction: column; display:flex; width: 24px; height: 24px; background: url('../assets/imgs/check-off.png') no-repeat; background-size: 18px 18px; background-position: center center; }
+    .terms_box .terms_tit .chk label p { flex-direction: column; white-space:nowrap;  flex-wrap: nowrap;  justify-content: center; padding-left:3px; display:flex; height: 24px;; }
+    .terms_box .terms_tit .chk input[type="checkbox"]:checked + label i {background: url('../assets/imgs/check-on.png') no-repeat; background-size: 18px 18px; background-position: center center;  }
+
+    .terms_box .terms_cont {padding-top: 5px }
+    .terms_box .terms_cont div {width: 100%; max-height: 100px; overflow-x: hidden; overflow-y: auto; font-size: 12px; color: #4a4a4a; padding: 10px; border:solid 1px #c7c7c7;}
+
+    .last_check {padding-top: 25px;}
+    .last_check input[type='checkbox'] {display: none;}
+    .last_check label {display: flex; flex-direction: row; }
+    
+    .last_check label i { flex-direction: column; display:flex; width: 24px; height: 24px; background: url('../assets/imgs/check-off.png') no-repeat; background-size: 18px 18px; background-position: center center; }
+    .last_check label p { flex-direction: column; white-space:nowrap;  flex-wrap: nowrap;  justify-content: center; padding-left:3px; display:flex; height: 24px;; }
+    .last_check input[type="checkbox"]:checked + label i {background: url('../assets/imgs/check-on.png') no-repeat; background-size: 18px 18px; background-position: center center;  }
+
+
+    .btnsbox {width: 100%; padding: 0 16px; position: absolute; bottom: 10px; }
+    .btnsbox button {margin:0; padding:0; box-shadow: none; border: none; width: 100%; height: 50px; color: #fff; background: #205da8; font-size:14px; border-radius: 2px; }
+}

@@ -1,0 +1,42 @@
+page-alarm {
+    .optlist {padding: 0; height: 100%; min-height:400px; padding-bottom: 160px; background:   #fcfbfc; position: relative; }
+    .optlist ion-row {display: flex; flex-direction: row; padding: 0 16px; height: 56px; border-bottom:solid 1px #ebebeb;  }
+    .optlist ion-row.pd_fix {padding-right: 5px;}
+    .optlist ion-row ion-col {display: flex; flex-direction: column; justify-content: center; }
+    .optlist ion-row ion-col.icon {min-width:24px; max-width: 24px; }
+
+    .optlist ion-row ion-col.txt {padding-left: 15px; flex-grow: 55; font-size:16px; font-weight:400; color: #4a4a4a;}
+
+    .toggle-md.toggle-checked .toggle-icon {background: #205da8; }
+    .toggle-md.toggle-checked .toggle-inner {background: #fff;}
+    .toggle-ios.toggle-checked .toggle-icon {background: #205da8;}
+
+    .datetime-md, .datetime-ios {margin: 0; padding: 0; }
+    .datecss .item-cover .button-effect {display: none!important}
+
+    .timeron .datecss .item-cover { color: #4a4a4a; background: url('../assets/imgs/btn_drop.png') no-repeat; background-size: 10px 5px; background-position: 93% 50%;   }
+    .datecss .item-cover { color: #4a4a4a; background: url('../assets/imgs/btn_drop_un.png') no-repeat; background-size: 10px 5px; background-position: 93% 50%;   }
+    
+    .timeron .datecss .datetime-text { color: #4a4a4a;}
+    .datecss .datetime-text { color: #9b9b9b; }
+
+    .optlist ion-row.flexrow {height: 80px; min-height: 80px;;}
+
+    .optlist ion-row.pd_fix ion-select  {width: 100%; border: solid 1px #ddd; max-width: none; }
+    .md button .button-effect { display: none; }
+    .popover-md .popover-content {margin-top: 38px;}
+    .radio-md .radio-icon { display: none }
+    .newsel option {background: #f00!important;}
+    .datetime-md, .datetime-ios {margin: 0; padding: 0; }
+    .datecss .item-cover .button-effect {display: none!important}
+    .he55 {min-height: 38px; max-height: 38px }
+    .newsel .item-cover .button-effect {display: none!important}
+    .md button .button-effect {display: none!important; }
+    .datetime-md .item-cover:after {content: ""; position: absolute; right: 0; }
+    .datecss .item-cover { color: #4a4a4a; background: url('../assets/imgs/btn_drop.png') no-repeat; background-size: 10px 5px; background-position: 93% 50%; height: 80px;;  }
+    .selbox_mar {height: 80px;}
+    .datecss .item-cover .md button .button-effect {display: none!important;}
+    .selbox div {height: 45px;;}
+
+    .optlist ion-row ion-col.flex2 {flex-grow: 2; }
+}

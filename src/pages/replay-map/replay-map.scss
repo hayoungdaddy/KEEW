@@ -1,0 +1,60 @@
+page-replay-map {
+
+    #warning {display: none;position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;background: rgba(255, 0, 0, 0.3);z-index: 2147483647;}
+    #warning.warn {display: block;}
+    #remainTime.warn {color: red;}
+    
+    .bigMap {height: 100%; min-height: 100%; background: #ccc; }
+
+    .bt_fix {position: fixed; bottom: 0; width: 100%;margin:0; padding:0; }
+
+    .bt_fix .bt_btn {margin:0; padding:0;}
+    .bt_fix .bt_btn ion-col { margin:0; padding: 0; }
+    .bt_fix .bt_btn ion-col button {width: 100%; height:50px; box-shadow: none; margin:0; padding: 0; background: #205da8; border-radius: 0; font-size:14px;   }
+
+    .bt_fix .bt_btn ion-col button ion-icon {width: 18px; height:100%; background-repeat: no-repeat; background-position: center center;  margin-right:15px; }
+    .bt_fix .bt_btn ion-col button ion-icon.share {background-image: url('../assets/imgs/btn_share.png'); background-size:16px 18px; }
+    .bt_fix .bt_btn ion-col button ion-icon.tel {background-image: url('../assets/imgs/btn_map_call.png'); background-size:18px 18px; }
+
+
+    .notice { background: #fff; padding: 15px; display:flex; flex-direction: row;  }
+
+    .notice .tm_box {max-width: 72px; display:flex; flex-direction: column;  }
+    .notice .timer {border: solid 1px #ebebeb; width: 72px; height: 70px; border-radius: 2px;;}
+    .notice .timer span {font-size: 12px; color: #6e6e6e; text-align:center; text-align: center; width: 100%; display: inline-block; margin-top:5px;  }
+    .notice .timer h1 {letter-spacing: -4px; color: #4a4a4a; font-size: 40px; text-align: center; }
+    .notice .timer h1 span {font-size: 12px; letter-spacing: -0.1px; width: auto; display: inline; padding-left: 3px }
+
+    .notice .tx_box {padding-left:15px; display:flex; flex-direction: column; flex-grow: 500; }
+    .notice .main_notice {color: #4a4a4a; font-weight: 500; }
+    .notice .line {margin:10px 0 13px 0;  }
+    .notice .line i { display: block; width:100%; height: 1px; background: #ebebeb;  }
+    .notice .info ion-col {height: 30px; justify-content: center; align-items: center;  }
+    .notice .info ion-col.mgSets {max-width: 10px; width: 10px; min-width: 10px;;}
+    .notice .info ion-col p {width: 100%; background: #ffd100; color: #fff; text-align:center; height:100%; display: flex; justify-content: center; align-items: center; border-radius: 2px; }
+    .notice .info ion-col p span {padding-left: 10px; }
+
+    
+    /*map.scss에 추가, map.html notice>tx_box>info에 lv1~lv4 클래스 추가 */
+    .notice .timer span {  margin-top:5px;  }
+    .notice .info.lv1 ion-col p { background: #ffd300; }
+    .notice .info.lv2 ion-col p { background: #ffb236; }
+    .notice .info.lv3 ion-col p { background: #ff7b36; }
+    .notice .info.lv4 ion-col p { background: #ff5936; }
+
+    .mapbox .mb_fix .yellowbtn {position: absolute; top:5px; right: 5px; background: #ffd300; color: #fff; border-radius: 2px; font-size: 14px; line-height: 30px; height: auto; padding: 0 22px;  }
+
+
+    //181013
+    .mapbox .mb_fix .notice {letter-spacing:-0.6px; position: absolute; top: 0; left: 0; width: 100%; padding:12px 0; background: rgba(0,0,0,0.5); color: #fff; text-align: center; justify-content: center;}
+
+    .radius_border{border:1px solid #919191;border-radius:5px;}     
+    .custom_typecontrol {z-index: 9999;position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+    .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+    .custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+    .custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+    .custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+    .custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+    .custom_typecontrol .selected_btn:hover {color:#fff;}   
+
+}

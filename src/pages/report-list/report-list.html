@@ -1,0 +1,22 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>제보 자료</ion-col>>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid class="basicbg nopadding">
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">제보 자료</ion-col>
+        </ion-row>
+
+        <ion-grid class="photobox">
+            <ion-row *ngFor="let line of lines;">
+                <ion-col class="thumbs">
+                    <div *ngFor="let file of line; let i=index" [ngStyle]="{'background-image': 'url(' + file + ')'}" (click)="view(file)"></div>
+                </ion-col>          
+            </ion-row>
+        </ion-grid>
+    </ion-grid>
+</ion-content>

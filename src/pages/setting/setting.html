@@ -1,0 +1,46 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>환경설정</ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+	<ion-grid class="optlist">
+		<ion-row class="pd_fix" (click)="alarmPage()">
+			<ion-col class="icon"><ion-icon class="type1"></ion-icon></ion-col>
+			<ion-col class="txt">알림 수신 및 위치정보 사용 설정</ion-col>
+		</ion-row>
+
+		<ion-row (click)="SettingCallPage()">
+			<ion-col class="icon"><ion-icon class="type3"></ion-icon></ion-col>
+			<ion-col class="txt">비상 연락망</ion-col>
+		</ion-row>
+
+		<ion-row (click)="MapTablePage()">
+			<ion-col class="icon"><ion-icon class="type4"></ion-icon></ion-col>
+			<ion-col class="txt">진도 등급 안내</ion-col>
+		</ion-row>
+
+		<ion-grid class="notice">
+			<div>
+				<h1>현재 버전 v0.9</h1>
+
+				<p>본 앱은 한국지질자원연구원(KIGAM)과 협약된 사용자에게 제공되는 연구/시험용 앱이며 제공된 정보 활용에 대한 책임은 사용자에게 있습니다.</p>
+				<span>({{terms1time}})</span>
+
+				<p>본 앱에서 보내는 지진 정보 알림 수신에 동의합니다.</p>
+				<span>({{terms2time}})</span>
+
+				<p>지진동 도착시간 계산을 위하여 위치정보 사용에 동의합니다. 단, 위치정보는 외부로 전송되거나 수집되지 않습니다.</p>
+				<span>({{terms3time}})</span>
+			</div>
+		</ion-grid>
+
+		<ion-row class="copyright">
+			<img src="assets/imgs/img_logo.png" alt="KIGAM LOGO"> <!--181120 로고 추가 -->
+			<p>Copyright 2020 KIGAM All Rights Reserved.</p>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

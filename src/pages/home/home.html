@@ -1,0 +1,39 @@
+<ion-content no-border id="main">
+	<ion-row id="map"></ion-row>
+	<ion-row id="list">
+		<ion-row class="list_box" *ngFor="let data of list; let i=index" (click)="DetailPage(data)">
+			<ion-col class="number"><i>{{i+1}}</i></ion-col>
+			<ion-col class="{{className[i]}}">{{data.el_mag}}</ion-col>
+			<ion-col class="location">
+				<h1>{{data.el_addr}}</h1>
+				<p>{{data.el_time_kst}}</p>
+			</ion-col>
+			<ion-col class="date">{{date[i]}}</ion-col>
+		</ion-row>
+	</ion-row>
+	<ion-row id="menu">
+		<ion-col (click)="ListPage()">
+			<div>
+				<ion-icon class="icon1"></ion-icon>
+				<span>지진 목록</span>
+			</div>
+		</ion-col>
+		<ion-col (click)="OpenManual()">
+			<div>
+				<ion-icon class="icon2"></ion-icon>
+				<span>대피 요령</span>
+			</div>
+		</ion-col>
+		<ion-col (click)="SettingPage()">
+			<div>
+				<ion-icon class="icon3"></ion-icon>
+				<span>환경설정</span>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-content>
+
+<ion-footer no-border id="footer">
+	<img src="assets/imgs/img_logo.png" alt="KIGAM LOGO"> 
+	<p>Copyright 2020 KIGAM All Rights Reserved.</p>
+</ion-footer>

@@ -1,0 +1,55 @@
+<!--
+비상 연락망 설정
+-->
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>지진 조기 경보 알림</ion-col>
+        <ion-col class="help"><button ion-button (click)="MapTablePage()">도움말</button></ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <div id="warning" ></div>
+    <ion-grid class="mapbox allbox">
+        <ion-grid class="mb_fix">
+
+          <ion-grid class="map" id="map"><!--지도들어가는곳--> 
+            <!-- <img class="sample222" src="assets/imgs/mapSample.png" alt="샘플이미지"> -->
+          </ion-grid>
+          <!-- <ion-icon>지진발생위치</ion-icon> -->
+          <!-- <i>내 위치</i> -->
+        </ion-grid>
+     </ion-grid>
+
+  <ion-grid class="bt_fix" style="z-index:9999;">
+    
+
+    <ion-row class="notice">
+      <ion-col class="tm_box">
+          <div class="timer">
+            <span>남은 시간</span>
+            <h1 id="remainTime">{{remainTime}}<span>초</span></h1>
+          </div>
+      </ion-col>
+      <ion-col class="tx_box">
+        <ion-row class="main_notice">{{message}}</ion-row>
+        <ion-row class="line"><i></i></ion-row>
+        <ion-row class="info">
+          <ion-col><p id="infoBox1">예측진도 <span>{{mag}}</span></p></ion-col>
+          <ion-col class="mgSets"></ion-col>
+          <ion-col><p id="infoBox2">예측진동 <span>{{magStr}}</span></p></ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="bt_btn">
+      <ion-col><button ion-button (click)="share()"><ion-icon class="share"></ion-icon>공유</button></ion-col>
+      <ion-col><button ion-button (click)="call()" ><ion-icon class="tel"></ion-icon>통화</button></ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

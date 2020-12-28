@@ -1,0 +1,88 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>지진 상세</ion-col>
+        <ion-col class="share"><button ion-button (click)="share()">공유</button></ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid class="basicbg nopadding">
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">지진 정보</ion-col>
+        </ion-row>
+
+        <ion-grid class="w_listbox">
+			<ion-grid class="w_group">
+				<ion-col class="wg_1">
+					<ion-row>
+						<ion-col class="tit">일시</ion-col>
+						<ion-col class="cont">{{data.el_time_kst}}</ion-col>
+					</ion-row>
+				</ion-col>
+
+				<ion-col class="wg_margin"></ion-col>
+
+				<ion-col class="wg_2">
+					<ion-row>
+						<ion-col class="tit">규모</ion-col>
+						<ion-col class="cont">{{data.el_mag}}</ion-col>
+					</ion-row>
+				</ion-col>
+          	</ion-grid>
+
+			<ion-row>
+				<ion-col class="tit">발생 지역</ion-col>
+				<ion-col class="cont">{{data.el_addr}}<br>
+					({{data.el_lat}}, {{data.el_lng}})</ion-col>
+			</ion-row>
+
+			<ion-row class="bt100">
+				<button ion-button class="bc_btn" (click)="kigamLink()">상세보기</button>
+			</ion-row>
+        </ion-grid>
+
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">지도 상세보기</ion-col>
+        </ion-row>
+
+        <ion-grid class="mapbox">
+            <ion-grid id="detailmap_wrap" class="mb_fix" style="position: relative">
+				<div class="custom_typecontrol radius_border">
+					<button id="btnRoadmap" class="selected_btn" (click)="setMapType('roadmap')">지도</button>
+					<button id="btnSkyview" class="btn" (click)="setMapType('skyview')">스카이뷰</button>
+				</div>
+
+				<ion-grid class="map" id="detailmap"><!--지도들어가는곳--> 
+					<!-- <img class="sample222" src="assets/imgs/mapSample.png" alt="샘플이미지"> -->
+				</ion-grid> 
+            </ion-grid>
+
+            <ion-row class="bt100"> 
+                <button (click)="replay()" ion-button class="bc_btn"><ion-icon class="replay"></ion-icon>다시보기</button>
+            </ion-row>
+		</ion-grid>
+
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">제보 자료</ion-col>
+        </ion-row>
+
+        <ion-grid class="photobox">
+            <ion-row *ngIf="files.length > 0">
+				<ion-col class="thumbs">
+					<div *ngFor="let file of files; let i=index" [ngStyle]="{'background-image': 'url('+file+')'}" (click)="view(i)"></div>
+				</ion-col>
+			</ion-row>
+
+            <ion-row class="two_btn">
+				<ion-col><button ion-button class="bc_btn" (click)="more()" >+ 더보기</button></ion-col>
+				<ion-col class="margin"></ion-col>
+				<ion-col><button ion-button class="bc_btn" (click)="ReportPage()"><ion-icon class="report"></ion-icon>제보하기</button></ion-col>
+			</ion-row>
+        </ion-grid>     
+    </ion-grid>
+</ion-content>

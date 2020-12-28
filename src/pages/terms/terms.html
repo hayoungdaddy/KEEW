@@ -1,0 +1,75 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class='txt_area left'>이용약관</ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content class="basicbg">
+  	<ion-grid class="ttbox">
+    	<ion-grid class="terms_box">
+      		<ion-row class="terms_tit">
+				<ion-col class="tit">앱 이용 동의 (필수)</ion-col>
+				<ion-col class="chk">
+				<input type="checkbox" id="chk1" [(ngModel)]="chk1" (click)="termsCheck(1)">
+				<label for="chk1">
+					<i></i>
+					<p>동의</p>
+				</label>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="terms_cont">
+				<ion-col class="cont_box">
+					<div>본 앱은 한국지질자원연구원(KIGAM)과 협약된 사용자에게 제공되는 연구/시험용 앱이며 제공된 정보 활용에 대한 책임은 사용자에게 있습니다.</div>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="terms_tit">
+				<ion-col class="tit">알림 수신 동의 (선택)</ion-col>
+				<ion-col class="chk">
+					<input type="checkbox" [(ngModel)]="chk2" id="chk2" (click)="termsCheck(2)">
+					<label for="chk2">
+						<i></i>
+						<p>동의</p>
+					</label>
+				</ion-col>
+			</ion-row>
+    
+			<ion-row class="terms_cont">
+				<ion-col class="cont_box">
+					<div>본 앱에서 보내는 지진 정보 알림 수신에 동의합니다.</div>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="terms_tit">
+				<ion-col class="tit">위치정보 사용 동의 (선택)</ion-col>
+				<ion-col class="chk">
+					<input type="checkbox" id="chk3" [(ngModel)]="chk3" (click)="termsCheck(3)">
+					<label for="chk3">
+						<i></i>
+						<p>동의</p>
+					</label>
+				</ion-col>
+			</ion-row>
+    
+			<ion-row class="terms_cont">
+				<ion-col class="cont_box">
+				<div>지진동 도착시간 계산을 위하여 위치정보 사용에 동의합니다. 단, 위치정보는 외부로 전송되거나 수집되지 않습니다.</div>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="last_check">
+				<input type="checkbox" id="chk4" [(ngModel)]="chk4" (click)="allCheck()">
+				<label for="chk4">
+					<i></i>
+					<p>모든 약관에 동의합니다.</p>
+				</label>
+			</ion-row>
+    	</ion-grid>
+
+		<ion-grid class="btnsbox">
+			<button ion-button (click)="start()">시작하기</button>
+		</ion-grid>
+
+  	</ion-grid>
+</ion-content>

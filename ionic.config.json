@@ -1,0 +1,7 @@
+{
+  "name": "kigam",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

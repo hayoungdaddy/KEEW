@@ -1,0 +1,76 @@
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>검색조건 설정</ion-col>
+        <ion-col class="check"><button ion-button (click)="search()">확인</button></ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content class="nopadding">
+    <ion-grid  class="basicbg nopadding h100">
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">날짜</ion-col>
+        </ion-row>
+
+        <ion-row class="flexrow bc_pd mgtop10 he55">
+            <ion-col class="selbox"><ion-datetime min="2018-01-01" displayFormat="YYYY-MM-DD" [(ngModel)]="startDate" class="datecss" (ionChange)="getDate1()"></ion-datetime></ion-col>
+            <ion-col class="selbox_mar">~</ion-col>
+            <ion-col class="selbox"><ion-datetime min="2018-01-01" displayFormat="YYYY-MM-DD" [(ngModel)]="endDate" class="datecss" (ionChange)="getDate2()"></ion-datetime></ion-col>
+        </ion-row>
+
+        <ion-row class="flexrow bc_pd mgtop10 text_dongul">
+            <span (click)="dateBtn(-1)"><i>전체</i></span>
+            <span class={{dateBtnClass[0]}} (click)="dateBtn(0)"><i>오늘</i></span>
+            <span class={{dateBtnClass[1]}} (click)="dateBtn(1)"><i>어제</i></span>
+            <span class={{dateBtnClass[2]}} (click)="dateBtn(2)"><i>일주일</i></span>
+            <span class={{dateBtnClass[3]}} (click)="dateBtn(3)"><i>한 달</i></span>
+            <span class={{dateBtnClass[4]}} (click)="dateBtn(4)"><i>1 년</i></span>
+        </ion-row>
+
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">지역</ion-col>
+        </ion-row>
+
+        <ion-row class="flexrow bc_pd mgtop10">
+            <ion-col class="selbox">
+                <ion-select interface='popover' class="newsel" [(ngModel)]="selectCity" (ionChange)="changeCity()">
+                    <ion-option *ngFor="let data of city; let i=index">{{data}}</ion-option>
+                </ion-select>
+            </ion-col>
+
+            <ion-col class="selbox_mar fix1"></ion-col>
+            <ion-col class="selbox">
+                <ion-select interface='popover' class="newsel" [(ngModel)]="selectRegion" (ionChange)="changeRegion()">
+                    <ion-option  *ngFor="let data of region; let i=index">{{data}}</ion-option>
+                </ion-select>
+            </ion-col>
+        
+            <ion-col class="selbox_mar fix1"></ion-col>
+            <button class="sel_search"><ion-icon (click)="curLoc()">찾기</ion-icon></button>
+        </ion-row>
+
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">규모</ion-col>
+        </ion-row>
+
+        <ion-row class="flexrow bc_pd mgtop10 ">
+            <ion-col class="selbox" >
+
+            <ion-select interface='popover' class="newsel" [(ngModel)]="mag" (ionChange)="changeMag()">
+                <ion-option selected value="0">전체</ion-option>
+                <ion-option value="2">규모 2이상</ion-option>
+                <ion-option value="3">규모 3이상</ion-option>
+                <ion-option value="4">규모 4이상</ion-option>
+                <ion-option value="5">규모 5이상</ion-option>
+                <ion-option value="6">규모 6이상</ion-option>
+            </ion-select>
+            </ion-col>
+
+            <ion-col class="selbox_mar fix30"></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

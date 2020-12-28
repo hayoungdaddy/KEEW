@@ -1,0 +1,27 @@
+page-list {
+
+    .basicbg {height: 100%;}
+    .lately_box {height: 100%; background: #fcfbfc;}
+    .line_bx {width: 100%; margin: 10px 0 0 0; height: 1px; }
+    .line_bx i {width: 100%; height: 100%; display: block; background: #ebebeb; }
+    //.headermap ion-grid {padding:0; background:#ccc; height:170px; min-height: 170px; max-height: 170px; overflow:hidden; text-align: center;}
+
+    //181006 추가
+    .lately_box { border-top:solid 2px #ebebeb}
+    .lately_txt .tit {flex-grow: 5;}
+    .lately_txt {display: flex; flex-direction: row; padding-bottom: 2px;}
+    .lately_txt>ion-col {display: flex; flex-direction: column;}
+    .lately_txt .seleter { }
+    .lately_txt .seleter ion-row {display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end;  }
+    .lately_txt .seleter i, .lately_txt .seleter p {display: flex; flex-direction: column; }
+    .lately_txt .seleter i {text-indent: -9999999px;min-width: 24px; max-width: 24px; width:24px; height: 24px; background-repeat: no-repeat; background-size:7.4px 12px; background-position: center center;   }
+    .lately_txt .seleter i.left {background-image: url('../assets/imgs/btn_page_l.png'); }
+    .lately_txt .seleter i.right {background-image: url('../assets/imgs/btn_page_r.png'); }
+    .lately_txt .seleter p { min-width:40px; height: 24px; padding: 0 5px; align-items: center; justify-content: center;}
+
+
+
+    .headermap { height:260px; min-height: 260px; max-height: 260px; position: relative; }
+    .headermap ion-grid {padding:0; height: 100%; max-height: none; min-height: auto; background:#ccc; overflow:hidden; text-align: center;}
+    .headermap .filter_box {position: absolute; bottom: 0; width: 100%; }
+}

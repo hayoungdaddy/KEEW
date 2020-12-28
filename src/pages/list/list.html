@@ -1,0 +1,48 @@
+<!-- 지진리스트 -->
+<ion-header class="ki_header shadow">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()" >뒤로</button></ion-col>
+        <ion-col class='txt_area left'>지진 목록</ion-col>
+        <ion-col class="filter"><button ion-button (click)="ListFilterPage()">검색</button></ion-col>
+    </ion-row>
+
+    <ion-row class="headermap">
+		<ion-grid  id="listmap"><!--MapArea--></ion-grid>
+		<ion-row class="filter_box" id="fContainer">
+			<span (click)="delete(1)" id="fDate">{{filterDate1}} ~ {{filterDate2}}<i></i></span>
+			<span (click)="delete(2)" id="fMag">규모 {{filterMag}}<i></i></span>
+			<span (click)="delete(3)" id="fCity">{{filterCity}}<i></i></span>
+			<span (click)="delete(4)" id="fRegion">{{filterRegion}}<i></i></span>
+		</ion-row>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+	<ion-grid class="basicbg nopadding">
+		<ion-row class="lately_txt pdtop20 bc_pd">
+			<ion-col class="tit">최근 지진 목록</ion-col>
+			<ion-col class="seleter">
+				<ion-row>
+					<i class="left" (click)="pageChange(0)">이전</i>
+					<p>{{page}}/{{totalpage}}</p>
+					<i class="right" (click)="pageChange(1)">다음</i>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+
+    	<ion-row class="line_bx"><i></i></ion-row>
+
+		<ion-grid class="lately_box nowhite">
+			<!-- 반복 -->
+			<ion-row class="lb_group"  *ngFor="let data of list; let i=index"  (click)="DetailPage(data)">
+				<ion-col class="numbering"><i>{{i+1}}</i></ion-col> 
+				<ion-col class={{className[i]}}>{{data.el_mag}}</ion-col>
+				<ion-col class="tit">
+					<p>{{data.el_time_kst}}</p>            
+					<h1>{{data.el_addr}}</h1>
+				</ion-col>
+				<ion-col class="arrow"><ion-icon>상세보기</ion-icon></ion-col>
+			</ion-row>
+     	 </ion-grid >
+ 	</ion-grid>
+</ion-content>

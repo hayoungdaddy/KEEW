@@ -1,0 +1,184 @@
+<!--
+제보하기
+-->
+<ion-header class="ki_header">
+    <ion-row class="kj_top"> 
+        <ion-col class="back"><button ion-button (click)="back()">뒤로</button></ion-col>
+        <ion-col class='txt_area left'>제보하기</ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid class="basicbg nopadding">
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">지진 정보</ion-col>
+        </ion-row>
+
+        <ion-grid class="w_listbox">
+            <ion-grid class="w_group">
+				<ion-col class="wg_1">
+					<ion-row>
+						<ion-col class="tit">일시</ion-col>
+						<ion-col class="cont">{{data.el_time_kst}}</ion-col>
+					</ion-row>
+				</ion-col>
+  
+              	<ion-col class="wg_margin"></ion-col>
+  
+              	<ion-col class="wg_2">
+                  	<ion-row>
+                      	<ion-col class="tit">규모</ion-col>
+                      	<ion-col class="cont">{{data.el_mag}}</ion-col>
+                    </ion-row>
+              	</ion-col>
+            </ion-grid>
+  
+            <ion-row>
+				<ion-col class="tit">발생 지역</ion-col>
+				<ion-col class="cont">{{data.el_addr}}<br>
+					({{data.el_lat}}, {{data.el_lng}})</ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt pdtop20 bc_pd">
+            <ion-col class="tit">지역 선택</ion-col>
+        </ion-row>
+        <ion-row class="flexrow bc_pd mgtop10">
+            <ion-col class="selbox" > 
+                <ion-select interface='popover' class="newsel" [(ngModel)]="selectCity"  (ionChange)="changeCity('')">
+                    <ion-option  *ngFor="let data of city; let i=index" >{{data}}</ion-option>
+                </ion-select>
+            </ion-col>
+
+            <ion-col class="selbox_mar fix1"></ion-col>
+            <ion-col class="selbox"> 
+                <ion-select interface='popover' class="newsel" [(ngModel)]="selectRegion" (ionChange)="changeRegion()">
+                    <ion-option  *ngFor="let data of region; let i=index">{{data}}</ion-option>    
+                </ion-select>
+            </ion-col>
+            <ion-col class="selbox_mar fix1"></ion-col>
+            <button  class="sel_search"><ion-icon (click)="curLoc()">찾기</ion-icon></button>
+        </ion-row>
+       
+        <ion-row class="line_bx mgtop20"><i></i></ion-row>
+
+        <ion-row class="lately_txt two pdtop20 bc_pd">
+            <ion-row class="tit">진도 등급 선택</ion-row>
+            <ion-row class="sub">당신은 이 지진을 어떻게 느끼셨나요?</ion-row>
+        </ion-row>
+       
+        <ion-grid class="imgcardBox">
+            <ion-row>
+                <ion-col class="tr" (click)="selectScale(1);">
+                    <div class="" [ngClass]="selScale[0]">
+                        <img src="assets/imgs/btn_scale1.png" alt="1등급">
+                        <i></i>
+                        <p>1등급</p>
+                    </div>  
+                </ion-col>
+                <ion-col class="margin"></ion-col>
+                <ion-col class="tl" (click)="selectScale(2);">
+                    <div class="" [ngClass]="selScale[1]">
+                        <img src="assets/imgs/btn_scale2.png" alt="2등급">
+                        <i></i>
+                        <p>2등급</p>
+                    </div> 
+                </ion-col>
+            </ion-row>
+  
+            <ion-row>
+                <ion-col class="tr" (click)="selectScale(3);">
+                    <div class="" [ngClass]="selScale[2]">
+                        <img src="assets/imgs/btn_scale3.png" alt="3등급">
+                        <i></i>
+                        <p>3등급</p>
+                    </div>  
+               	</ion-col>
+                <ion-col class="margin"></ion-col>
+                <ion-col class="tl" (click)="selectScale(4);">
+                    <div class="" [ngClass]="selScale[3]">
+                        <img src="assets/imgs/btn_scale4.png" alt="4등급">
+                        <i></i>
+                        <p>4등급</p>
+                    </div> 
+                </ion-col>
+            </ion-row>
+  
+            <ion-row>
+                <ion-col class="tr" (click)="selectScale(5);">
+                    <div class="" [ngClass]="selScale[4]">
+                        <img src="assets/imgs/btn_scale5.png" alt="5등급">
+                        <i></i>
+                        <p>5등급</p>
+                    </div>  
+                </ion-col>
+                <ion-col class="margin"></ion-col>
+                <ion-col class="tl" (click)="selectScale(6);">
+                    <div class="" [ngClass]="selScale[5]">
+                        <img src="assets/imgs/btn_scale6.png" alt="6등급">
+                        <i></i>
+                        <p>6등급</p>
+                    </div> 
+    			</ion-col>
+            </ion-row>
+  
+            <ion-row>
+                <ion-col class="tr" (click)="selectScale(7);">
+                    <div class="" [ngClass]="selScale[6]">
+                        <img src="assets/imgs/btn_scale7.png" alt="7등급">
+                        <i></i>
+                        <p>7등급</p>
+                    </div>  
+               </ion-col>
+                <ion-col class="margin"></ion-col>
+                <ion-col class="tl" (click)="selectScale(8);">
+                    <div class="" [ngClass]="selScale[7]">
+                        <img src="assets/imgs/btn_scale8.png" alt="8등급">
+                        <i></i>
+                        <p>8등급</p>
+                    </div> 
+                </ion-col>
+            </ion-row>
+  
+            <ion-row>
+                <ion-col class="tr" (click)="selectScale(9);">
+                    <div class="" [ngClass]="selScale[8]">
+                        <img src="assets/imgs/btn_scale9.png" alt="9등급">
+                        <i></i>
+                        <p>9등급</p>
+                    </div>  
+                </ion-col>
+                <ion-col class="margin"></ion-col>
+                <ion-col class="tl" (click)="selectScale(10);">
+                    <div class="" [ngClass]="selScale[9]">
+                        <img src="assets/imgs/btn_scale10.png" alt="10등급">
+                        <i></i>
+                        <p>10등급</p>
+                    </div> 
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+		<ion-row class="line_bx mgtop20"><i></i></ion-row>      
+
+        <ion-row class="lately_txt two pdtop20 bc_pd">
+            <ion-row class="tit">자료 첨부</ion-row>
+            <ion-row class="sub">사진 및 동영상, 음성 파일을 첨부하실 수 있습니다.</ion-row>
+        </ion-row>
+
+        <ion-grid class="photobox">
+            <ion-row>
+              	<ion-col class="plz_file" (click)="addFile()"><img id="addImg" style=" width: 20px; height: 20px; " src={{imgsrc}} alt="추가"></ion-col>
+              	<ion-col class="plz_file" *ngFor="let data of images; let i=index"><img style=" width: 100px; height: 100px; " src={{data}} (click)="delFile(i)"></ion-col>
+            </ion-row>
+
+            <ion-row class="two_btn">
+              	<ion-col><button ion-button class="bc_btn white" (click)="back()">취소</button></ion-col>
+              	<ion-col class="margin"></ion-col>
+              	<ion-col><button ion-button class="bc_btn" (click)="report()">등록</button></ion-col>
+            </ion-row>
+        </ion-grid>  
+    </ion-grid>
+</ion-content>

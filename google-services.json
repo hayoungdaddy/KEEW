@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "511730877008",
+    "firebase_url": "https://keew-ffaf7.firebaseio.com",
+    "project_id": "keew-ffaf7",
+    "storage_bucket": "keew-ffaf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511730877008:android:bbc52ae369b38ace",
+        "android_client_info": {
+          "package_name": "kr.re.kigam.keew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511730877008-qebku13ce418sotab1reoqfbdpsjqfv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.re.kigam.keew",
+            "certificate_hash": "1ad4c05c89d522d0e158bf38dbf2292a4a77faa5"
+          }
+        },
+        {
+          "client_id": "511730877008-njvat6gginglsh18oin9705iq28nl6iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEufnqTR_1wrCOM26FnrO4OHwBX-Pi0cU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511730877008-njvat6gginglsh18oin9705iq28nl6iq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "511730877008-16nb47hq8jrgmfvvahiak52s0ffrvle3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.re.kigam.keew"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
